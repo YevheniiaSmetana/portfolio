@@ -38,17 +38,19 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="text-center">
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <h2 className={styles.sectionHeadText} style={{color: '#915EFF'}}>Overview</h2>
       </motion.div>
-
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm a detail-oriented front-end developer proficient in HTML, CSS, and JavaScript, with hands-on experience in React and TypeScript. I thrive in cross-functional teams, creating efficient and user-friendly interfaces that enhance user experience. Eager to collaborate, learn and contribute to meaningful web solutions. Let's transform your concepts into reality!
-      </motion.p>
+      <div className='w-full flex justify-center items-center'>
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='mt-4 text-secondary text-center text-[17px] max-w-3xl leading-[30px]'
+        >
+          I'm a detail-oriented front-end developer proficient in HTML, CSS, and JavaScript, with hands-on experience in React and TypeScript. I thrive in cross-functional teams, creating efficient and user-friendly interfaces that enhance user experience. Eager to collaborate, learn and contribute to meaningful web solutions. 
+          <p>Let's transform your concepts into reality!</p>
+        </motion.p>
+      </div>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
